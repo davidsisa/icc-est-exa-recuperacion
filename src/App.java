@@ -37,6 +37,47 @@ public class App {
                                 new Persona("Lorena", 23),
                                 new Persona("Miguel", 52)
                 };
+                System.out.println("POR AÑO: ");
+                System.out.println("Array desordenado: ");
+                controlarArray.printArray(personas);
+                Persona[] arrayDescendente = controlarArray.sortWithSelection(personas);
+                System.out.println("Array Ordenado por seleccion: ");
+                controlarArray.printArray(arrayDescendente);
+                System.out.println("Busqueda Binaria: ");
+                int busqueda = controlarArray.searchBinary(arrayDescendente, 25);
+                int busqueda2 = controlarArray.searchBinary(arrayDescendente, 70);
+                if (busqueda == -1 ) {
+                    System.out.println("No encontrado");
+                } else {
+                        System.out.println("Encontrado el valor 25");   
+                }
+                if (busqueda2 == - 1 ) {
+                        System.out.println("No encontrado");
+                    } else {
+                            System.out.println("Encontrado el valor 70");   
+                    }
+
+
+
+                System.out.println("POR NOMBRE: ");
+                System.out.println("Array desordenado: ");
+                controlarArray.printArray(personas);
+                Persona[] arrayAscendente = controlarArray.sortWithInsertionNames(personas);
+                System.out.println("Array Ordenado por nombre: ");
+                controlarArray.printArray(arrayAscendente);
+                System.out.println("Busqueda Binaria  por nombre ");
+                int busqueda3 = controlarArray.searchBinaryName(arrayAscendente, "Anais");
+                int busqueda4 = controlarArray.searchBinaryName(arrayAscendente, "Miguel");
+                if (busqueda3 == -1 ) {
+                        System.out.println("No encontrado");
+                    } else {
+                            System.out.println("Encontrado el valor Anais");   
+                    }
+                    if (busqueda4 == - 1 ) {
+                            System.out.println("No encontrado");
+                        } else {
+                                System.out.println("Encontrado el valor Miguel");   
+                        };
 
                 /// TODOS los métodos deben ser implementados en la clase PersonaController
                 // Crear una instancia de la clase PersonaController y llamar a los métodos
@@ -44,7 +85,7 @@ public class App {
 
                 // 1 - Implementar un método para ordenar las personas por edad en orden
                 // desecendente tipo selección
-                
+
                 // 1.2 - Buscar a la persona con las sigueintes edaddes en el arreglo de
                 // personas ya ordenarod por edad
                 // - 25
