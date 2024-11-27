@@ -1,8 +1,10 @@
 
+import Controllers.PersonaController;
 import Models.Persona;
 
 public class App {
         public static void main(String[] args) throws Exception {
+                PersonaController controlarArray = new PersonaController();
                 Persona[] personas = {
                                 new Persona("Anais", 25),
                                 new Persona("Luis", 32),
@@ -42,7 +44,7 @@ public class App {
 
                 // 1 - Implementar un método para ordenar las personas por edad en orden
                 // desecendente tipo selección
-
+                
                 // 1.2 - Buscar a la persona con las sigueintes edaddes en el arreglo de
                 // personas ya ordenarod por edad
                 // - 25
